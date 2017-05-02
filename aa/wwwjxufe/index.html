@@ -1,0 +1,748 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="favicon.ico" />
+		<title>江西财经大学欢迎您</title>
+		<link rel="stylesheet" type="text/css" href="templets/css/index.css">
+		<script src="templets/js/jQuery.js"></script>
+		<script src="templets/js/index.js"></script>
+
+		<script>
+			//var ggl=document.getElementById("ggl");
+			//var ggl_ul_1=ggl.getElementsByTagName("ul")[0];
+			//var gglH=ggl_ul_1.scrollHeight;
+			//ggl_ul_1.innerHTML=ggl_ul_1.innerHTML+ggl_ul_1.innerHTML;
+			//var speed=50;
+			//function marquee()
+			//{
+			//	if(ggl.scrollTop>=gglH)
+			//	{
+			//		ggl.scrollTop=0;
+			//	}else{
+			//		ggl.scrollTop++;
+			//	}
+			//	
+			//};
+			//var tn=setInterval(marquee,speed)
+			//ggl.onmouseover=function() {clearInterval(tn)} ;
+			//ggl.onmouseout=function() {tn=setInterval(marquee,speed)}
+			var tpNews=document.getElementById("tpNews");
+			var tpNews_li=tpNews.getElementsByTagName("li");
+			tpNews_li[0].style.display="block";
+			
+			// 默认让第一张图片的标题显示
+			var tpNews=document.getElementById("bigPic");
+			var tpNews_li=tpNews.getElementsByTagName("li");
+			tpNews_li[0].style.display="block";
+			
+			var c,_=Function;
+		with(o=document.getElementById("div1")){ innerHTML+=innerHTML; onmouseover=_("c=1"); onmouseout=_("c=0");}
+		(F=_("if(#%225||!c)#++,#%=o.scrollHeight>>1;setTimeout(F,#%225?10:1500);".replace(/#/g,"o.scrollTop")))();
+		</script>
+		<script type="text/javascript">
+			function goLogin(){
+				if($('#selectLogin option:selected') .val()=="1"){
+					document.getElementById("form1").action = "http://portal.jxufe.edu.cn/web/guest/home";
+					document.getElementById("form1").action.submit();
+				}else if($('#selectLogin option:selected') .val()=="2"){
+					opacloginsubmit();
+					document.getElementById("form1").action = "http://210.35.206.99:8080/reader/redr_verify.php";
+					document.getElementById("form1").action.submit();
+				}else{
+					return false;
+				}
+				
+			}
+		
+		function goSearch(){
+		
+				var keyword = document.getElementById("keyword").value;
+				if(keyword==""){
+					alert("请输入搜索关键字");
+					return false;
+				}
+		
+				if($('#selectSearch option:selected') .val()=="1"){
+					window.location.href="/html/phonesearch.html?keyword="+escape(keyword);
+					return false;
+				}else if($('#selectSearch option:selected') .val()=="2"){
+					if(keyword.length<2||keyword.length>10){
+		                            alert('搜索最小长度2字符，最大长度10字符。');return false;
+		                        }
+		                        window.location.href='http://news.jxufe.edu.cn/Search.aspx?searchTitleAndContent=0 & tags='+escape(keyword)+'';
+			        }else{
+					if(keyword.length<2||keyword.length>10){
+		                            alert('搜索最小长度2字符，最大长度10字符。');return false;
+		                        }
+		                        window.location.href='http://news.jxufe.edu.cn/Search.aspx?searchTitleAndContent=1 & tags='+escape(keyword)+'';
+				}
+			}
+			
+			function opacloginsubmit(){
+		        document.getElementById('opacuidhidden').value=document.getElementById('username').value;
+		        document.getElementById('opacpsdhidden').value=document.getElementById('password').value;
+		        document.getElementById('username').value='';
+		        document.getElementById('password').value='';
+				
+		    }
+			
+		function randBg(){
+				
+				var picList = document.getElementsByName("picList");
+				
+				var num = parseInt(picList.length*Math.random());
+				
+				document.getElementById("bgPic").src=picList[num].value;
+			}
+			
+			$(document).ready(function() {
+				randBg();
+			});
+		</script>
+		<style>
+			#div1{height:225px;overflow:hidden;}
+		</style>
+	</head>
+
+	<script language="javascript" type="text/javascript" src="resource/js/jquery-1.7.1min.js"></script>
+	<script language="javascript" type="text/javascript" src="resource/js/jspublic.js"></script>
+
+	<body>
+		<!--背景11122--------------------------------------------->
+
+		<input type="hidden" value="/_mediafile/caidaedu/files/1415067635159615.jpg" name="picList" />
+
+		<input type="hidden" value="/_mediafile/caidaedu/files/1415067217437780.jpg" name="picList" />
+
+		<input type="hidden" value="/_mediafile/caidaedu/files/1415067177735593.jpg" name="picList" />
+
+		<input type="hidden" value="/_mediafile/caidaedu/files/1415067129360859.jpg" name="picList" />
+
+		<input type="hidden" value="/_mediafile/caidaedu/files/1415067076538379.jpg" name="picList" />
+
+		<div class="bg">
+
+			<img src="" id="bgPic">
+
+		</div>
+		<!--头部背景－－－－－－－－－－－－－－－-->
+		<div class="dh">
+		</div>
+		<div class="logo">
+
+			<a href="/" title="江西财经大学">
+				<img src="templets/images/logo.png" onload="fixPNG(this)">
+			</a>
+		</div>
+		<!-- 头部-->
+		<div class="headTop">
+			<div class="headTopInner">
+				<div class="headRight">
+					<div class="headRightTop" style=" height:25PX; line-height:25PX;">
+						<ul style="float:left; margin-top:5px; ">
+							<li class="firstMenuOne">
+
+								<a href="/html/ks/index.html" class="firstMenuOne_a">考生</a>
+
+							</li>
+							<li class="firstMenuOne">
+
+								<a href="/html/zxs1/index.html" class="firstMenuOne_a">在校生</a>
+
+							</li>
+							<li class="firstMenuOne">
+
+								<a href="/html/jzg/index.html" class="firstMenuOne_a">教职工</a>
+
+							</li>
+							<li class="firstMenuOne">
+
+								<a href="/html/shrs/index.html" class="firstMenuOne_a">社会人士</a>
+
+							</li>
+							<li><a href="http://alumni.jxufe.cn" class="firstMenuOne_a" style="border-right:none;" target="_blank">校友</a></li>
+							<li style="display:none;"><a target="_blank" style="border-right:none;padding-right:0;color:#ff0;" class="firstMenuOne_a" href="http://english.jxufe.edu.cn">English</a></li>
+						</ul>
+						<div style="float:left; margin-left:10px; width:65px; height:23px; font-size:12px; color:#FFFFFF;">
+							<a href="http://english.jxufe.edu.cn" class="firstMenuOne_a" style="border-right:none;padding-right:0;color:#ff0;" target="_blank"><img src="templets/images/540597744541.png" border="0"></a>
+						</div>
+					</div>
+					<div class="headRightBottom">
+						<div style="position:absolute;width:750px;">
+							<ul>
+								<li>
+
+								</li>
+								<li class="showMenuOne">
+
+									<a title="校情总揽" class="containLiA">校情总揽</a>
+
+									<ul class="menuOne">
+
+										<li class="liOne"><a href="/html/xxjj/index.html" title="学校简介">学校简介</a></li>
+
+										<li class="liOne"><a href="/html/lsyg2/index.html" title="历史沿革">历史沿革</a></li>
+
+										<li class="liOne"><a href="/html/xrld/index.html" title="现任领导">现任领导</a></li>
+
+										<li class="liOne"><a href="/html/lrld/index.html" title="历任领导">历任领导</a></li>
+
+										<li class="liOne"><a href="/html/xxdt/index.html" title="学校导图">学校导图</a></li>
+
+										<li class="liOne"><a href="/html/whbs/index.html" title="文化标识">文化标识</a></li>
+
+										<li class="liOne"><a href="/html/xyfg/index.html" title="校园风光">校园风光</a></li>
+
+										<li class="showMenuTwo liOne">
+
+											<a href="/html/sjjc/index.html" title="数据江财" class="showMenuTwoA">数据江财></a>
+
+											<ul class="menuTwo">
+
+												<li><a href="/html/xkyl/index.html" title="学科一览">学科一览</a></li>
+
+												<li><a href="/html/zyxwdyl2/index.html" title="专业学位点一览">专业学位点一览</a></li>
+
+												<li><a href="/html/zyyl2/index.html" title="专业一览">专业一览</a></li>
+
+												<li><a href="/html/bsdyl/index.html" title="博士点一览">博士点一览</a></li>
+
+												<li><a href="/html/ssdyl/index.html" title="硕士点一览">硕士点一览</a></li>
+
+												<li><a href="/html/szdw/index.html" title="师资队伍">师资队伍</a></li>
+
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="showMenuOne">
+
+									<a href="/html/jgsz1/index.html" title="机构设置" class="containLiA" target="_blank">机构设置</a>
+
+									<ul class="menuOne">
+
+										<li class="liOne"><a href="/html/gljg/index.html" title="管理机构" target="_blank">管理机构</a></li>
+
+										<li class="liOne"><a href="/html/xysz/index.html" title="学院设置" target="_blank">学院设置</a></li>
+
+										<li class="liOne"><a href="/html/kyjg/index.html" title="科研机构" target="_blank">科研机构</a></li>
+
+									</ul>
+								</li>
+								<li class="showMenuOne">
+
+									<a title="教学科研" class="containLiA" target="_blank">教学科研</a>
+
+									<ul class="menuOne">
+
+										<li class="liOne"><a href="http://kyc.jxufe.cn/" title="科研管理" target="_blank">科研管理</a></li>
+
+										<li class="liOne"><a href="http://cfe.jxufe.cn/index.html" title="当代财经" target="_blank">当代财经</a></li>
+
+										<li class="liOne"><a href="http://cfe.jxufe.cn/index.html" title="江财学报" target="_blank">江财学报</a></li>
+
+										<li class="liOne"><a href="http://bogb.jxufe.cn/" title="博士后流动站" target="_blank">博士后流动站</a></li>
+
+										<li class="liOne"><a href="http://news.jxufe.cn/html//669756265117.html" title="教学成果展示" target="_blank">教学成果展示</a></li>
+
+										<li class="liOne"><a href="http://jxw.jxufe.edu.cn/" title="江财教学网" target="_blank">江财教学网</a></li>
+
+										<li class="liOne"><a href="http://jwc3.jxufe.cn/web/" title="教务信息网" target="_blank">教务信息网</a></li>
+
+										<li class="liOne"><a href="http://jwc3.jxufe.cn/web/flash/" title="课程示范" target="_blank">课程示范</a></li>
+
+										<li class="liOne"><a href="http://jwc3.jxufe.cn/web/s/zhilianggongchengxiangmu/" title="质量工程" target="_blank">质量工程</a></li>
+
+										<li class="liOne"><a href="http://jwc1.jxufe.cn/web/YuQaIF/" title="教学投诉" target="_blank">教学投诉</a></li>
+
+									</ul>
+								</li>
+								<li class="showMenuOne">
+
+									<ul class="menuOne">
+
+									</ul>
+								</li>
+								<li class="showMenuOne">
+
+									<a title="国际交流" class="containLiA" target="_blank">国际交流</a>
+
+									<ul class="menuOne">
+
+										<li class="liOne"><a href="http://oec.jxufe.cn/ " title="项目简介" target="_blank">项目简介</a></li>
+
+										<li class="liOne"><a href="http://oec.jxufe.edu.cn/html/hzyxx/index.html" title="合作院校" target="_blank">合作院校</a></li>
+
+										<li class="liOne"><a href="http://oecmis.jxufe.edu.cn" title="国际化信息系统" target="_blank">国际化信息系统</a></li>
+
+									</ul>
+								</li>
+								<li class="showMenuOne">
+
+									<a title="招生就业" class="containLiA" target="_blank">招生就业</a>
+
+									<ul class="menuOne">
+
+										<li class="liOne"><a href="http://bogb.jxufe.cn/" title="博士后招收" target="_blank">博士后招收</a></li>
+
+										<li class="liOne"><a href="http://grs.jxufe.cn/gs/index.html" title="博士研究生" target="_blank">博士研究生</a></li>
+
+										<li class="liOne"><a href="http://grs.jxufe.cn/" title="硕士研究生" target="_blank">硕士研究生</a></li>
+
+										<li class="liOne"><a href="http://zsjy.jxufe.edu.cn/zs/" title="本科招生" target="_blank">本科招生</a></li>
+
+										<li class="liOne"><a href="http://cjxy.jxufe.cn/" title="继续教育" target="_blank">继续教育</a></li>
+
+										<li class="liOne"><a href="/html/jzxj/index.html" title="奖助学金" target="_blank">奖助学金</a></li>
+
+										<li class="liOne"><a href="http://zsjyphp.jxufe.edu.cn/" title="本科生就业" target="_blank">本科生就业</a></li>
+
+										<li class="liOne"><a href="http://portal.jxufe.edu.cn/login/login.jsp" title="远程教育" target="_blank">远程教育</a></li>
+
+										<li class="liOne"><a href="http://jxufe.ciss.org.cn/" title="留学江财" target="_blank">留学江财</a></li>
+
+									</ul>
+								</li>
+								<li class="showMenuOne">
+
+									<a title="数字校园" class="containLiA" target="_blank">数字校园</a>
+
+									<ul class="menuOne">
+
+										<li class="liOne"><a href="http://oa.jxufe.cn/" target="_blank">办公自动化</a></li>
+
+										<li class="liOne"><a href="http://lib.jxufe.edu.cn/" target="_blank">图书资源</a></li>
+
+										<li class="liOne"><a href="http://ecampus.jxufe.edu.cn/" target="_blank">信息门户</a></li>
+
+										<li class="liOne"><a href="http://view.jxufe.cn/" target="_blank">校园全景地图</a></li>
+
+										<li class="liOne"><a href="http://xk.jxufe.edu.cn/" target="_blank">选课平台</a></li>
+
+										<li class="liOne"><a href="http://jxw.jxufe.cn" target="_blank">网络教学平台</a></li>
+
+										<li class="liOne"><a href="http://mail.jxufe.cn/" target="_blank">教工邮箱</a></li>
+
+										<li class="liOne"><a href="http://sve.jxufe.edu.cn/" target="_blank">网络服务</a></li>
+
+										<li class="liOne"><a href="http://bx.jxufe.edu.cn/" target="_blank">网络报修</a></li>
+
+										<li class="liOne"><a href="http://bwc.jxufe.cn/default.aspx" target="_blank">综治平台</a></li>
+
+										<li class="liOne"><a href="http://cwc.jxufe.cn/News_View.asp?NewsID=357" target="_blank">网上缴费</a></li>
+
+									</ul>
+								</li>
+								<li>
+									<a href="http://lib.jxufe.edu.cn/" title="图书资源" class="containLiA" target="_blank">图书资源</a>
+								</li>
+								<li>
+									<a href="http://rsc.jxufe.cn/rsc/news_view.asp?newsid=1854" title="人才招聘" class="containLiA" target="_blank">人才招聘</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--文体部分-->
+		<div class="contain">
+			<!--大轮播图片-->
+			<div class="containTop">
+				<div class="containTopPosition">
+					<div class="imgMenu">
+						<ul>
+
+							<li>
+								<a href="http://www.jxufe.edu.cn/html/2017/2-30/n16841203.html" target="_blank"><img src="/_mediafile/caidaedu/files/149085914884255.jpg" border="0"></a>
+							</li>
+
+							<li>
+								<a href="http://www.jxufe.edu.cn/html/2017/2-10/n47101203.html" target="_blank"><img src="/_mediafile/caidaedu/files/1489123315875906.jpg" border="0"></a>
+							</li>
+
+							<li>
+								<a href="http://www.jxufe.edu.cn/html/2017/1-20/n12751202.html" target="_blank"><img src="/_mediafile/caidaedu/files/1487571142864641.jpg" border="0"></a>
+							</li>
+
+							<li>
+								<a href="http://www.jxufe.edu.cn/html/2017/2-10/n65291203.html" target="_blank"><img src="/_mediafile/caidaedu/files/1489126607890890.jpg" border="0"></a>
+							</li>
+
+							<li>
+								<a href="http://www.jxufe.edu.cn/html/2017/2-10/n02001203.html" target="_blank"><img src="/_mediafile/caidaedu/files/1489124237796227.jpg" border="0"></a>
+							</li>
+
+							<li></li>
+						</ul>
+					</div>
+					<span id="buttonL" class="buttonLR"></span>
+					<span id="buttonR" class="buttonLR"></span>
+					<ul class="imgText" id="bigPic">
+
+						<li>
+							<span class="span1">创新引领 绿色崛起  担当实干 兴赣富民</span>
+							<br>
+							<span class="span2"> </span>
+						</li>
+
+						<li>
+							<span class="span1">坚持五大发展理念</span>
+							<br>
+							<span class="span2"> </span>
+						</li>
+
+						<li>
+							<span class="span1">凝心聚力 继续前行</span>
+							<br>
+							<span class="span2"> </span>
+						</li>
+
+						<li>
+							<span class="span1">立德树人</span>
+							<br>
+							<span class="span2"> </span>
+						</li>
+
+						<li>
+							<span class="span1">撸起袖子加油干！</span>
+							<br>
+							<span class="span2"> </span>
+						</li>
+
+						<li></li>
+					</ul>
+					<div class="imgTextIE6">
+
+					</div>
+				</div>
+			</div>
+			<hr style="background:#C2262D;">
+			<div class="containMidd">
+				<div class="containLeft">
+					<div class="tpNews">
+						<ul class="tpNewsKong">
+							<li style="background:#f00">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+						</ul>
+						<span style="position:absolute;top:13px;left:0px;color:#cf0000;font-size:15px; font-weight:bold">图片新闻</span>
+						<ul class="tpNewsUl" id="tpNews">
+
+							<li style="display:none">
+								<a href="http://news.jxufe.cn/html/2017/3-7/n94861203.html" target="_blank" title="李利副省长来校调研指导工作"><img src="http://news.jxufe.cn/_mediafile/caidanews/files/1491542427406928.JPG" width="180px" height="140px" border="0"></a>
+								<span class="span3" title="李利副省长来校调研指导工作">李利副省长来校调研指导工作</span>
+							</li>
+
+							<li style="display:none">
+								<a href="http://news.jxufe.cn/html/2017/2-30/n91151203.html" target="_blank" title="校长恳谈会：用心平等对话"><img src="http://news.jxufe.cn/_mediafile/caidanews/files/1490862722202131.jpg" width="180px" height="140px" border="0"></a>
+								<span class="span3" title="校长恳谈会：用心平等对话">校长恳谈会：用心平等对话</span>
+							</li>
+
+							<li style="display:none">
+								<a href="http://news.jxufe.cn/html/2017/2-29/n03031203.html" target="_blank" title="2017年度第一次院长例会召开"><img src="http://news.jxufe.cn/_mediafile/caidanews/files/1490774897764359.jpg" width="180px" height="140px" border="0"></a>
+								<span class="span3" title="2017年度第一次院长例会召开">2017年度第一次院长例会召开</span>
+							</li>
+
+							<li style="display:none">
+								<a href="http://news.jxufe.cn/html/2017/2-28/n87401203.html" target="_blank" title="江西省委常委、宣传部长赵力平来校调研"><img src="http://news.jxufe.cn/_mediafile/caidanews/files/1490693992780741.jpg" width="180px" height="140px" border="0"></a>
+								<span class="span3" title="江西省委常委、宣传部长赵力平来校调研">江西省委常委、宣传部长赵力平来校调研</span>
+							</li>
+
+						</ul>
+					</div>
+					<div class="spNews">
+
+						<span style="position:absolute;top:13px;left:0px;color:#cf0000;font-size:15px; font-weight:bold"><a style="color:#cf0000" href="http://172.31.5.98:88/" target="_blank">视频新闻</a>      <a href="http://172.31.5.98:88/" target="_blank"> </a></span>
+						<a href="http://172.31.5.98:88/" target="_blank" title="学校宣传片：赣鄱腾蛟"><img src="/_mediafile/caidaedu/files/1425611547718378.jpg" width="181px" height="109px"></a>
+						<span class="span3" title="学校宣传片：赣鄱腾蛟">学校宣传片：赣鄱腾蛟</span>
+
+					</div>
+					<div class="gonglen">
+						<div class="xitongEnter">
+							<form name="form1" method="post" action="" id="form1" style="display:none;">
+								<table width="230" border="0">
+									<tr>
+										<td width="60" height="25" align="center" valign="middle">用户名：
+
+											<!--信息门户登陆-->
+											<input name="p_p_id" value="58" type="hidden">
+											<input name="p_p_lifecycle" value="1" type="hidden">
+											<input name="p_p_state" value="normal" type="hidden">
+											<input name="p_p_mode" value="view" type="hidden">
+											<input name="p_p_col_id" value="column-1" type="hidden">
+											<input name="p_p_col_count" value="1" type="hidden">
+											<input name="saveLastPath" value="0" type="hidden">
+											<input name="_58_struts_action" value="/login/login" type="hidden">
+
+										</td>
+										<td width="75">
+											<input name="_58_login" type="text" class="input1" id="username">
+											<input id="opacuidhidden" name="number" type="hidden">
+											<input value="cert_no" checked="checked" name="select" type="radio" style="display:none">
+										</td>
+										<td width="75">
+											<select name="selectLogin" class="input1" id="selectLogin">
+												<option value="1" selected="selected">信息门户</option>
+												<option value="2">图书馆</option>
+											</select>
+										</td>
+									</tr>
+
+									<tr>
+										<td height="25" align="center">
+											<label>密 码：</label>
+										</td>
+										<td>
+											<input name="_58_password" type="password" class="input1" id="password" />
+											<input id="opacpsdhidden" name="passwd" type="hidden">
+										</td>
+										<td valign="bottom">
+											<!--<input type="image" src="http://www.jxufe.edu.cnhttp://www.jxufe.edu.cn/templets/cdzz/images/userLoin.png" name="button" id="button" class="input1" onClick="return goLogin();"/>-->
+											<input type="image" src="/templets/cdzz/images/userLoin.png" name="button" id="button" class="input1" onClick="return false;" />
+										</td>
+									</tr>
+								</table>
+							</form>
+							<style type="text/css">
+								.cyfw a{
+								  	color:#575757;
+									background: url("/templets/images/zhenLi.png") no-repeat left center ;
+									padding-left:10px;
+								  }
+							</style>
+							<table width="230" border="0" class="cyfw">
+								<tr>
+									<td height="22" align="left" valign="middle">
+										<a href="http://oa.jxufe.cn" target="_blank">办公自动化</a>
+									</td>
+									<td>
+										<a href="mailto:727058217@qq.com">网络投稿</a>
+									</td>
+								</tr>
+								<tr>
+									<td height="22" align="left">
+										<a href="http://repair.jxufe.cn" target="_blank">后勤网上报修</a>
+									</td>
+									<td>
+										<a href="http://jcys.jxufe.cn:88/" target="_blank">江财网络电视</a>
+									</td>
+								</tr>
+								<tr>
+									<td height="22" align="left">
+										<a href="http://blog.jxufe.cn/index.html " target="_blank">蛟湖博客</a>
+									</td>
+									<td>
+										<a href="http://epaper.jxufe.edu.cn/" target="_blank">校报电子版</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="zanleiss">
+							<form action="/Search_loadList" method="post" id="FieldSearchForm">
+								<table width="112" border="0">
+									<tr valign="top">
+										<td width="110" height="25">
+											<label for="textfield"></label>
+											<!--<input type="text" name="textfield" id="keyword" class="input1" style="width:110px;"></td>-->
+											<input type="text" name="title" placeholder="输入关键字" class="input1" style="width:110px;">
+										</td>
+									</tr>
+									<tr valign="top">
+										<td height="25" valign="bottom">
+											<!--<label for="select"></label>
+                            <select name="select2" id="selectSearch" class="input2" style="float:left">
+                              <option value="1">电话</option>
+                              <option value="2">标题</option>
+                              <option value="3">正文</option>
+                            </select>-->
+											<!-- <input type="image" onClick="goSearch()" src="/templets/images/seacher.png" name="button2" id="button2" value="提交" class="input2" style="background:#A12728;cursor:pointer;color:#fff;">-->
+											<input type="submit" onClick="goSearch()" src="/templets/images/seacher.png" name="button2" id="button2" value="提交" class="input2" style="background: #A12728;cursor:pointer;color:#fff;">
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="containCenter">
+					<div class="centerOut">
+						<ul class="centerUl">
+							<li style="background:none;margin:-9px 70px auto auto;_margin:-5px 70px auto auto;">
+								<a href="http://news.jxufe.cn/" title="财大新闻" target="_blank" style="height:16px;border:none; line-height:18px; color:#cf0000;font-size:15px; font-weight:bold">财大新闻</a></li>
+							<li><a href="http://news.jxufe.cn/" title="基层风采" target="_blank">基层风采</a></li>
+							<li><a href="http://news.jxufe.cn/html/xxgg/index.html" title="通知公告" target="_blank">通知公告</a></li>
+
+							<li><a href="http://news.jxufe.cn/html/mtjc1/index.html" target="_blank" title="媒体江财" style="border-right:none;">媒体江财</a></li>
+						</ul>
+						<div class="centerInner" id="ggl">
+
+							<ul style="display:block;">
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/2-28/n87401203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">江西省委常委、宣传部长赵力平来校调研</span>
+										<span class="span4">［04-13］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-13/n66491214.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">加拿大麦吉尔大学Asim Biswas博士来校讲学</span>
+										<span class="span4">［04-13］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-13/n89301203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">我校第八届“读书月”活动拉开序幕</span>
+										<span class="span4">［04-13］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-10/n51511203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">统计学院首届应用统计毕业班喜创考研佳绩</span>
+										<span class="span4">［04-13］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-12/n73061203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">江西日报头版报道我校人才工作</span>
+										<span class="span4">［04-12］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-12/n11441203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">学校召开安全隐患排查及校园环境整治推进会</span>
+										<span class="span4">［04-12］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-12/n83251203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">温锐教授论文为《新华文摘》转载</span>
+										<span class="span4">［04-12］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-12/n08161203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">绿派社喜获“全国最具影响力环保社团”称号</span>
+										<span class="span4">［04-12］</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/2017/3-11/n63521203.html" target="_blank">
+										<span class="span4_" style="cursor:pointer">江西日报头版报道我校智库建设</span>
+										<span class="span4">［04-11］</span>
+									</a>
+								</li>
+
+							</ul>
+							<ul>
+								<iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.cn/html/jcfczz/index.html" width="340" height="236"></iframe>
+							</ul>
+							<ul>
+								<iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.cn/html/tzggzz/index.html" width="340" height="236"></iframe>
+							</ul>
+
+							<ul>
+								<iframe frameborder="0" scrolling="no" allowtransparency="" src="http://news.jxufe.cn/html/mtjczz/index.html" width="340" height="236"></iframe>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="containRight">
+					<div class="tongdao">
+						<div class="huaL">
+							<img src="/templets/images/huaL.png">
+						</div>
+						<div class="xiaoQing">
+							<ul>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/jxcjdxdwcddhzt/index.html" target="_blank">
+										<img src="/_mediafile/caidaedu/files/1449029801361271.jpg" border="0">
+									</a>
+								</li>
+
+								<li>
+									<a href="http://news.jxufe.cn/html/bkjxgzshpgzl/index.html" target="_blank">
+										<img src="/_mediafile/caidaedu/files/1480039031939999.jpg" border="0">
+									</a>
+								</li>
+
+								<li>
+									<a href="http://newsoriginal.jxufe.cn/xjpscjx/index.asp" target="_blank">
+										<img src="/_mediafile/caidaedu/files/1461122175687596.jpg" border="0">
+									</a>
+								</li>
+
+							</ul>
+						</div>
+						<div class="huaR">
+							<img src="/templets/images/huaR.png">
+						</div>
+					</div>
+					<ul class="webLink">
+						<li><a href="http://www.jxunivs.cn/" target="_blank">映山红网</a></li>
+						<li><a href="http://ecampus.jxufe.edu.cn" target="_blank">信息门户</a></li>
+						<!--<li><a href="http://news.jxufe.cn/html/2015/10-26/n13251094.html" target="_blank">校历表(新)</a></li>-->
+						<!--<li><a href="http://ptr.chaoxing.com/course/3823335.html?edit=false" target="_blank">党建培训</a></li>-->
+						<!--<li><a href="http://jcys.jxufe.cn:88/" target="_blank">江财网络电视</a></li>-->
+						<!--<li><a href="http://news.jxufe.cn/html//576730445969.html" target="_blank">网络举报</a></li>-->
+						<!--<li><a href="http://newsoriginal.jxufe.cn/ydh/" target="_blank" style="color:#FF0000;font-weight:bold;">校运会专题</a></li>-->
+						<li><a href="http://md.jxufe.cn/" target="_blank">明德网</a></li>
+						<!-- <li><a href="http://repair.jxufe.cn" target="_blank">后勤网上报修</a></li>
+                    <li><a href="http://oa.jxufe.cn/Office/index.html?SsoClientServiceURI=aHR0cDovL29hLmp4dWZlLmNuL09mZmljZS9tYWluL2luZGV4LmFjdGlvbg==&errorCode=000" target="_blank">办公自动化</a></li>-->
+						<li><a href="http://news.jxufe.cn/html//576730445969.html" target="_blank">纪委网络举报</a></li>
+						<li><a href="http://www.jxgbwlxy.gov.cn" target="_blank">干部在线学习</a></li>
+						<li><a href="http://xyb.jxufe.cn/xyb/news_view.asp?newsid=1325" target="_blank">在线捐赠</a></li>
+						<li><a href="http://jxpg.jxufe.edu.cn/" target="_blank">审核评估</a></li>
+						<li><a href="http://news.jxufe.cn/html/xxgkzl/index.html" target="_blank">信息公开</a></li>
+						<li><a href="http://newsoriginal.jxufe.cn/xjpscjx/index.asp" target="_blank">“两学一做”</a></li>
+						<!-- <li><li><a href="http://news.jxufe.cn/html/2016/4-25/n29761167.html" target="_blank">校历表(新)</a></li>-->
+						<li><a href="http://jxufe.jx.qnzs.youth.cn/" target="_blank">青年之声</a></li>
+
+					</ul>
+					<div class="imgLink">
+						<a href="http://e.weibo.com/u/3286179197" style="margin-left:0px;" target="_blank"><span class="span5">新浪微博</span><img src="/templets/images/xl.png"></a>
+						<a href="http://news.jxufe.cn/html/2015/6-7/n35431087.html" target="_blank"><span class="span5">官方微信</span><img src="/templets/images/108257893840.png"></a>
+						<a href="mailto:xiaolingdao@jxufe.edu.cn" target="_blank" style="width:70px"><span class="span6">校领导信  箱</span><img src="/templets/images/email.png"></a>
+					</div>
+				</div>
+			</div>
+			<hr style="background:#B1B1B1;">
+			<div class="containBottom">
+				<div class="bottomAddress" style="font-family:'新宋体'">
+					蛟桥园校区：江西省南昌市昌北国家经济技术开发区双港东大街169号 邮编：330013 青山园校区：南昌市青山南路596号 邮编：330077
+					<br> 麦庐园校区：江西省南昌市昌北经济技术开发区玉屏大道 枫林园地址：江西省南昌市昌北经济技术开发区枫林大道632号 邮编：330013
+				</div>
+				<div class="bottomIn" style="font-family:" 新宋体 "">
+					<a ttarget="_blank" href="http://www.original.jxufe.cn">旧版网站入口</a>
+					<br>
+					<a target="_blank" href="http://xiaoyou.101.com/cxjc/index.shtml">wap手机入口</a>
+				</div>
+				<div style="font-family:新宋体; float:left; width:100px;">
+					<script type="text/javascript">
+						document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/15/000/0000/41045071/CA150000000410450710001.js' type='text/javascript'%3E%3C/script%3E"));
+					</script>
+				</div>
+				<div class="webInfo" style="font-family:'新宋体'">
+					<a target="_blank" href="http://nlnyj.gov.cn/" style="color:#5D5D5D">110网上报警系统</a>;<a target="_blank" href="http://117.40.91.39/zxbj.asp" style="color:#5D5D5D">在线报警</a> 版权所有：江西财经大学党委宣传部、新闻中心 备案号：赣B2-20050163号-1 </div>
+			</div>
+		</div>
+
+		<!-- visitcount Begin -->
+		<iframe src='/front/visitcount/visit.jsp?siteId=248797584414&classId=&newsId=' name="vishidden" id="vishidden" frameborder="0" style="width:0; height:0; display:none"></iframe>
+		<!-- visitcount End -->
+	</body>
+
+</html>
